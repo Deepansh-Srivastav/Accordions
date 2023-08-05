@@ -1,0 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Permanent+Marker&family=Roboto:wght@400;700&display=swap');
+
+body {
+    background-color: #34495e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.accordion {
+    width: 50%;
+}
+
+.accordionItem {
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.header {
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: relative;
+    line-height: 2rem;
+    color: black;
+}
+
+
+.button {
+    position: absolute;
+    right: 1rem;
+    bottom: 1.3rem;
+    cursor: pointer;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.text {
+    font-size: 1.5rem;
+    line-height: 40px;
+    border-top: 3px solid;
+    border-image: linear-gradient(to right, yellow, blue)1;
+    color: #34495e;
+    padding: 1rem 2rem;
+    max-height: auto;
+}
+
+.active {
+    transition: max-height .5s ease-in-out;
+    max-height: 500px;
+
+}
+
+/* 700px */
+@media(max-width : 44rem ){
+    .accordion{
+        width: 90%;
+    }
+
+}
+
+/* 480px */
+@media(max-width : 30rem ){
+
+    .header{
+        font-size:1rem ;
+    }
+    .button{
+        width: 15px ;
+    }
+    .text{
+        line-height: 20px;
+        font-size: .8rem;
+
+    }
+}
